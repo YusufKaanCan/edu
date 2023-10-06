@@ -13,19 +13,13 @@ public class Main {
     public static void SendMail(String emailAddress) {
         final String user = "lukskonya42@hotmail.com"; // Hotmail hesap e-posta adresi
         final String pass = "!LuksKonya0147852!"; // Hotmail hesap şifresi
-
-       // Properties props = new Properties();
-       // props.put("mail.smtp.auth", "true");
-       // props.put("mail.smtp.starttls.enable", "true");
-       // props.put("mail.smtp.host", "smtp.live.com"); // Hotmail için SMTP sunucu adresi
-       // props.put("mail.smtp.port", "587"); // Hotmail için SMTP portu (TLS kullanılmalıdır)
-
+       
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.ssl.enable", "true");
-       // props.put("mail.smtp.ssl.protocols", "TLSv1.2"); // veya daha yeni bir sürüm
-       // props.put("mail.smtp.ssl.ciphersuites", "TLS_AES_128_GCM_SHA256"); // TLS 1.2 veya daha yeni bir sürüm için uygun bir şifreleme seçin
+        props.put("mail.smtp.ssl.protocols", "TLSv1.2"); // veya daha yeni bir sürüm
+        props.put("mail.smtp.ssl.ciphersuites", "TLS_AES_128_GCM_SHA256"); // TLS 1.2 veya daha yeni bir sürüm için uygun bir şifreleme seçin
         props.put("mail.smtp.host", "smtp.office365.com");
         props.put("mail.smtp.port", "587");
 
