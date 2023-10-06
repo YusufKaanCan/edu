@@ -11,15 +11,15 @@ import java.util.Properties;
 
 public class Main {
     public static void SendMail(String emailAddress) {
-        final String user = "lukskonya42@hotmail.com"; // Hotmail hesap e-posta adresi
-        final String pass = "!LuksKonya0147852!"; // Hotmail hesap şifresi
+        final String user = "lukskonya42@hotmail.com";
+        final String pass = "!LuksKonya0147852!"; 
        
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.ssl.enable", "true");
-        props.put("mail.smtp.ssl.protocols", "TLSv1.2"); // veya daha yeni bir sürüm
-        props.put("mail.smtp.ssl.ciphersuites", "TLS_AES_128_GCM_SHA256"); // TLS 1.2 veya daha yeni bir sürüm için uygun bir şifreleme seçin
+        props.put("mail.smtp.ssl.protocols", "TLSv1.2");
+        props.put("mail.smtp.ssl.ciphersuites", "TLS_AES_128_GCM_SHA256"); 
         props.put("mail.smtp.host", "smtp.office365.com");
         props.put("mail.smtp.port", "587");
 
@@ -92,7 +92,7 @@ public class Main {
                 System.out.println("43 - 80 Arası Fiyat : 550");
             } else {
                 System.out.println("Geçerli Bir İl Seçmediniz");
-                return; // Geçerli bir il seçilmediği durumda metodu sonlandır
+                return; 
             }
 
             System.out.println("Fiyatı Onaylamak İçin 1 Tuşunu Seçiniz");
@@ -144,7 +144,7 @@ public class Main {
                         String post = scan.nextLine();
                         System.out.println("Lütfen Şifrenizi Giriniz : ");
                         String pass = scan.nextLine();
-                        String user = post + " , " + pass; // E-posta ve şifreyi birleştirip tek bir String olarak saklayabilirsiniz.
+                        String user = post + " , " + pass; 
                         users.add(user);
                         SendMail(post);
                         System.out.println("Giriş - Kayıt İşlemleri Tamamlandı. Doğrulama Epostası Gönderiliyor.\n");
